@@ -18,4 +18,11 @@ The steps to implement this project are:
 
 Extracting data
 
+Build predictive models
+
+Evaluate accuracy
+
+Make predictions and iterate
+
+
 
