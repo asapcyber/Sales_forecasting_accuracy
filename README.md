@@ -25,7 +25,9 @@ Before building different predicitive models a set of data preparation operation
 
 # Build predictive models
 The three models that are created to predict Opportunities that will be booked are:
-* Generalized Linear Model (GLM) using logistic regression, whcih predicts a binary outcome, i.e. is an opportnity won or lost based on various independent variables. The initial variables used to predict WinLoss are: Opp.Age, Type, Strategic.Account, Competitor.Count, Account.Type, Close.Date.Changed, Forecast.Category, Industry, Deal.Forward, In.Forecast. 
+* Generalized Linear Model (GLM) using logistic regression, which predicts a binary outcome, i.e. is an opportunity won or lost based on various independent variables. The initial variables used to predict WinLoss are: Opp.Age, Type, Strategic.Account, Competitor.Count, Account.Type, Close.Date.Changed, Forecast.Category, Industry, Deal.Forward, In.Forecast. After a few iterations the list is reduced to the following: Opp.Age, Type, Close.Date.Changed, In.Forecast.
+* Classification And Regression Tree (CART) model with a set.seed parameter of 3000, using the same independent variables as in the Logistic Regression model. Other parameters set in the model are method="class", minbucket=10.
+* Random Forest Model, which requires the dependent variable to be changed to a factor using the as.factor function. Other parameters set in the model include ntree=300, nodesize=10, na.action=na.roughfix.
 
 # Evaluate accuracy
 
