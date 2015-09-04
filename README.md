@@ -20,9 +20,12 @@ The steps to implement this project are:
 A tabular report is developed in Salesforce.com to extract all opportunities data for the past 2 years, including approx. 50 attributes like Opportunity Age, Status, Region, Sales Price etc. This report is saved as a CSV file and split into a Training and a Testing set based on dates of the opportunities. The ones before the most recent quarter are used for training the model, and the ones in the past quarter are used for testing it. After reading the CSV files into separate data frames, a subset is created for each that only includes opportunities for which the Stage is either Won or Lost, i.e. we know whether they ended up in booking an order or not. This way once the model is trained we can verify its accuracy using the actual designation of the closed Opportunities.
 Before building different predicitive models a set of data preparation operations needs to be performed:
 * Convert factors to numbers using as.numeric function for Logistic Regression model
+* Create a new numeric variable (<b>WinLoss</b>) using the Stage of an Opportunity, taking value 1 if the Opportunity was WON, and value 0 if it was LOST. This will be used as the dependent variable for the predictive models.
 * Load libraries for CART and Random Forest models
 
 # Build predictive models
+The three models that are created to predict Opportunities that will be booked are:
+* Generalized Linear Model (GLM) using logistic regression, whcih predicts a binary outcome, i.e. is an opportnity won or lost based on various independent variables. The initial variables used to predict WinLoss are: Opp.Age, Type, Strategic.Account, Competitor.Count, Account.Type, Close.Date.Changed, Forecast.Category, Industry, Deal.Forward, In.Forecast. 
 
 # Evaluate accuracy
 
