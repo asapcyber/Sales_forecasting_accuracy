@@ -18,6 +18,9 @@ The steps to implement this project are:
 
 # Extracting data
 A tabular report is developed in Salesforce.com to extract all opportunities data for the past 2 years, including approx. 50 attributes like Opportunity Age, Status, Region, Sales Price etc. This report is saved as a CSV file and split into a Training and a Testing set based on dates of the opportunities. The ones before the most recent quarter are used for training the model, and the ones in the past quarter are used for testing it. After reading the CSV files into separate data frames, a subset is created for each that only includes opportunities for which the Stage is either Won or Lost, i.e. we know whether they ended up in booking an order or not. This way once the model is trained we can verify its accuracy using the actual designation of the closed Opportunities.
+Before building different predicitive models a set of data preparation operations needs to be performed:
+* Convert factors to numbers using as.numeric function for Logistic Regression model
+* Load libraries for CART and Random Forest models
 
 # Build predictive models
 
