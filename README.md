@@ -30,7 +30,7 @@ The three models that are created to predict Opportunities that will be booked a
 * Random Forest Model, which requires the dependent variable to be changed to a factor using the as.factor function. Other parameters set in the model include ntree=300, nodesize=10, na.action=na.roughfix.
 
 # Evaluate accuracy
-
+The accuracy of each model is measured using a confusion matrix to compare actual wins/losses againts the ones forecasted by each model, using the test data set.
 # Make predictions and iterate
 
 
