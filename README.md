@@ -29,9 +29,16 @@ The three models that are created to predict Opportunities that will be booked a
 * Classification And Regression Tree (CART) model with a set.seed parameter of 3000, using the same independent variables as in the Logistic Regression model. Other parameters set in the model are method="class", minbucket=10.
 * Random Forest Model, which requires the dependent variable to be changed to a factor using the as.factor function. Other parameters set in the model include ntree=300, nodesize=10, na.action=na.roughfix.
 
+# Make predictions
+
 # Evaluate accuracy
-The accuracy of each model is measured using a confusion matrix to compare actual wins/losses againts the ones forecasted by each model, using the test data set.
-# Make predictions and iterate
+The accuracy of each model is measured using a confusion matrix to compare actual wins/losses againts the ones forecasted by each model, using the test data set. Sensitivity is used to help forecast actual win rate, i.e.the true positive rate, which measures the proportion of positives that are correctly identified as such.
+Sensitivity=#of true positives (correctly forecasted wins)/# of TP + # of false negatives (incorrectly forecasted losses)
+
+#Iterate model with new data and measure accuracy again
+
+
+
 
 
 
