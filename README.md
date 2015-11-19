@@ -30,10 +30,16 @@ The three models that are created to predict Opportunities that will be booked a
 * Random Forest Model, which requires the dependent variable to be changed to a factor using the as.factor function. Other parameters set in the model include ntree=300, nodesize=10, na.action=na.roughfix.
 
 # Make predictions
+For each of the models predictions are made on the test data that translate for each opportunity in the current quarter to the predicted Win/Loss outcome. This prediction is then used to measure accuracy and determine what % of the bookings tied to the in-quarter opportunities will lead to forecasted total $$ bookings.
 
 # Evaluate accuracy
 The accuracy of each model is measured using a confusion matrix to compare actual wins/losses againts the ones forecasted by each model, using the test data set. Sensitivity is used to help forecast actual win rate, i.e.the true positive rate, which measures the proportion of positives that are correctly identified as such.
 Sensitivity=#of true positives (correctly forecasted wins)/# of TP + # of false negatives (incorrectly forecasted losses)
+The total dollars amount of the in-quarter bookings is multipled by the sensitivity % number to then derive the forecasted bookings for the current quarter, using the following criteria and formula:
+- all opportunities WHERE stage is not lost (i.e. exclude any oportunities for whivh 
+
+# Write output file
+The accuracy of each model is measured using a confusion matrix to compare actual wins/losses againts the ones forecasted by 
 
 #Iterate model with new data and measure accuracy again
 
